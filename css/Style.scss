@@ -1,0 +1,143 @@
+/*Define variables for the primary colors
+$primary_1: #a2b9bc;
+$primary_2: #b2ad7f;
+$primary_3: #878f99;
+$primary_4: red;
+$primary_5: green;*/
+/*use the variables
+//ejemplo
+.main-header{background-color: $primary_1;}
+.menu-left{background-color: $primary_2;}
+.menu-right{background-color: $primary_3;}
+.menu-zz{background-color: $primary_4;}
+
+// variables que almacenan la informacion
+/*tipos de variables
+cadena de caracteres String
+numeros int double
+colores
+booleanos booleans
+listas ul li
+nulos null
+$nombrevariable:valordelavariable
+$variablename:value*/
+@import "reset";
+@import "colors";
+
+$myFont: Helvetica, sans-serif;
+$myColor: green;
+$myFontSize: 18px;
+$myWidth: 680px;
+
+body{
+    font-family: $myFont;
+    font-size: $myFontSize;
+    color: $myPink;
+}
+
+h1{
+    $myColor1: red !global;
+    color: $myColor1;
+    font-family: $myFont;
+}
+
+p{
+    color: $myColor1;
+}
+
+#container{
+    width: $myWidth;
+}
+
+nav{
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    li{
+        display: inline-block;
+    }
+    a{
+        display: block;
+        padding: 7px 13px;
+    }
+}
+
+.font{
+    font: {
+        family: Helvetica, sans-serif;
+        size:18px;
+        weight: bold;
+        }
+}
+
+.text{
+    text: {
+        align: center;
+        transform: lowercase;
+        overflow: hidden;
+    }
+}
+
+// mezclas o mixin es una directiva @mixin para crear codigo en css que se va a utilizar en el sitio y el @include es una directiva que nos permite usar o incluir el @mixin
+
+/* @misxin Sass
+@mixin name{
+    propiedad1:valor;
+    propiedad2:valor;
+    propiedad3:valor;
+}*/
+$colorT: yellow;
+
+@mixin  texto-importante ($colorT) {
+    color: $colorT;
+    font-size: 30px;
+    font-weight: bold;
+    border: 2px solid blue;
+}
+
+/*@include
+selector {@include mixin-name}*/
+
+.danger{
+    @include texto-importante (yellow);
+    background-color: pink;
+}
+
+$colorb: yellowgreen;
+$width: 2px;
+@mixin bordes ($colorb, $width) {
+    border: $width solid $colorb;
+}
+
+.art1{
+@include bordes($colorb, 3px)
+}
+
+.art2{
+@include bordes(yellowgreen, 1px)
+}
+
+//@extend sirve para compartir conjunto de propiedades de un selector a otro
+
+.basic:hover{
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.report{
+    @extend .basic;
+    background-color: red;
+
+}
+
+.submit{
+    @extend .basic;
+    background-color: green;
+    color: white;
+}
+

@@ -1,0 +1,115 @@
+/*Define variables for the primary colors
+$primary_1: #a2b9bc;
+$primary_2: #b2ad7f;
+$primary_3: #878f99;
+$primary_4: red;
+$primary_5: green;*/
+/*use the variables
+//ejemplo
+.main-header{background-color: $primary_1;}
+.menu-left{background-color: $primary_2;}
+.menu-right{background-color: $primary_3;}
+.menu-zz{background-color: $primary_4;}
+
+// variables que almacenan la informacion
+/*tipos de variables
+cadena de caracteres String
+numeros int double
+colores
+booleanos booleans
+listas ul li
+nulos null
+$nombrevariable:valordelavariable
+$variablename:value*/
+html, body, ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  color: #ee82ee;
+}
+
+h1 {
+  color: red;
+  font-family: Helvetica, sans-serif;
+}
+
+p {
+  color: red;
+}
+
+#container {
+  width: 680px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  display: block;
+  padding: 7px 13px;
+}
+
+.font {
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.text {
+  text-align: center;
+  text-transform: lowercase;
+  text-overflow: hidden;
+}
+
+/* @misxin Sass
+@mixin name{
+    propiedad1:valor;
+    propiedad2:valor;
+    propiedad3:valor;
+}*/
+/*@include
+selector {@include mixin-name}*/
+.danger {
+  color: yellow;
+  font-size: 30px;
+  font-weight: bold;
+  border: 2px solid blue;
+  background-color: pink;
+}
+
+.art1 {
+  border: 3px solid yellowgreen;
+}
+
+.art2 {
+  border: 1px solid yellowgreen;
+}
+
+.basic:hover, .report:hover, .submit:hover {
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.report {
+  background-color: red;
+}
+
+.submit {
+  background-color: green;
+  color: white;
+}
+/*# sourceMappingURL=Style.css.map */
